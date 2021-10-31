@@ -1,10 +1,15 @@
-Wordpress勉強会①  
-  
-#　本テキストの対象者
+# 本テキストの対象者
   
 Wordpress自体はある程度触ったことがあり、  
 何らかのカスタマイズをしようとしている開発者。  
   
+=======
+# 本テキストの対象者
+
+Wordpress自体はある程度触ったことがあり、
+何らかのカスタマイズをしようとしている開発者。
+
+>>>>>>> 239a9ecab0e86681b373a4876ccd9f3077d0e705
 # Wordpressのローカル開発環境
 
 Wordpressのローカル開発環境を作る場合、  
@@ -146,6 +151,7 @@ $login_header_url = apply_filters( 'login_headerurl', $login_header_url );
 データやHTMLなど出力結果を加工するならばapply_filters >>> add_filterを使うとよいでしょう。  
   
 ## 補足
+<<<<<<< HEAD
   
 先程のSQLログのカスタマイズはこれでもOKです。  
   
@@ -155,3 +161,14 @@ add_filter( 'query', function ( $query ){
     return $query;  
 });  
 ```
+=======
+
+先程のSQLログのカスタマイズはこれでもOKです。
+
+```
+add_filter( 'query', function ( $query ){
+    error_log( $query );
+    return $query;
+});
+```
+>>>>>>> 239a9ecab0e86681b373a4876ccd9f3077d0e705
