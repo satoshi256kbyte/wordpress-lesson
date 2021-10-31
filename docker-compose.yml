@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+
+  wp:
+    image: wordpress:5.8.1
+    restart: always
+    ports:
+      - 3100:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: lesson
+      WORDPRESS_DB_PASSWORD: lesson
+      WORDPRESS_DB_NAME: lesson
+    volumes:
+      - ./wordpress:/var/www/html
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: lesson
+      MYSQL_USER: lesson
+      MYSQL_PASSWORD: lesson
+      MYSQL_ROOT_PASSWORD: lesson
+    volumes:
+      - db:/var/lib/mysql
+
+volumes:
+  db:
