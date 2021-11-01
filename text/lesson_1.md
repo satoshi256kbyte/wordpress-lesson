@@ -3,12 +3,6 @@
 Wordpress自体はある程度触ったことがあり、  
 何らかのカスタマイズをしようとしている開発者。  
   
-=======
-# 本テキストの対象者
-
-Wordpress自体はある程度触ったことがあり、
-何らかのカスタマイズをしようとしている開発者。
-
 # Wordpressのローカル開発環境
 
 Wordpressのローカル開発環境を作る場合、  
@@ -158,14 +152,4 @@ add_filter( 'query', function ( $query ){
     error_log( $query );  
     return $query;  
 });  
-```
-=======
-
-先程のSQLログのカスタマイズはこれでもOKです。
-
-```
-add_filter( 'query', function ( $query ){
-    error_log( $query );
-    return $query;
-});
 ```
